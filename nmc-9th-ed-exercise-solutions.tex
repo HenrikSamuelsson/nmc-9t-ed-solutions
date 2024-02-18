@@ -1,0 +1,57 @@
+\documentclass[10pt]{article}
+
+% Math package
+\usepackage{amsmath}
+
+% Enum package for numbering exercise solutions
+\usepackage{enumitem}
+\setlist[enumerate]{
+    align=left,
+    labelindent=0pt,
+    labelsep=*,
+    font=\bfseries,
+}
+
+\begin{document}
+
+Some solutions to exercises from the book Numerical Mathematics and Computing, Seventh Edition, written by Cheney W., and Kincaid D., published 2013 by Cengage Learning.
+
+\section[Mathematical Preliminaries and Floating-Point Representation]
+{Mathematical Preliminaries and\\ Floating-Point Representation}
+
+
+\subsection{Introduction - Exercise Solutions}
+
+\begin{enumerate}
+
+    \item The number \( \pi \) can be approximated by fractions with varying degree of error. A first approximation is \( 22 / 7 \). To measure how good this approximation is we can calculate the absolute and relative error:
+    
+    \[ Absolute Error = \left| \pi - 22 / 7 \right| = -0.00126448926 \]
+
+    \[ Relative Error = \dfrac{\left| \pi - 22 / 7 \right|}{\left| \pi \right|} = -0.00040249943 \]
+
+    There are other fractions (Cook 2018) that gives better approximations than \( 22 / 7 \) A selection is presented in the below table, including absolute and relative errors. The actual error calculations are omitted because are not very interesting,  having been done in the same way as presented above.
+
+   \begin{center}
+    \begin{tabular}{c c c }
+        \hline
+        Fraction & Absolute Error & Relative Error \\
+        \hline
+        22/7 & -0.00126448926 & -0.00040249943 \\
+        355/113 & -2.66764189e-7 & -8.49136786e-8 \\
+        208341/66317 & 1.2235635e-10 & 3.8947235e-11 \\
+        1146408/364913 & 1.6107116e-12 & 5.1270541e-13 \\ 
+        \hline
+    \end{tabular}
+   \end{center}
+
+   The last two approximations from the above table both have an absolute error that is less than \( 10^{-9} \).
+
+\end{enumerate}
+
+\section{References}
+
+Cook, J. D. (2018, May, 22). 10 best rational approximations for pi.\\
+\textit{John D. Cock Consulting}. https://www.johndcook.com/blog/2018/05/22/best-approximations-for-pi/
+
+\end{document}
